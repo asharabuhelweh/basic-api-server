@@ -5,7 +5,7 @@
 ### Author: As-har Abuhelweh
 
 * [deployment for main branch ](https://ashar-basic-api-server.herokuapp.com/) .
-* [submission PR](https://github.com/asharabuhelweh/basic-api-server/pull/1) .
+* [submission PR](https://github.com/asharabuhelweh/basic-api-server/pull/3) .
 * [tests report](https://github.com/asharabuhelweh/basic-api-server/actions) 
  
 ### Setup
@@ -27,8 +27,8 @@
      ```
 
    
-    - Endpoint: `/api/v1/food`
-  - get the food object
+    - Endpoint: `/api/v1/clothes`
+  - get the clothes object
 
   ```
 
@@ -41,8 +41,8 @@
         }
     }
   ```
-- Endpoint: `/api/v1/food/3ec7d422-263b-4b21-bd17-f19fc7ca8700`
-  - Get the food Objects based on id
+- Endpoint: `/api/v1/clothes/3ec7d422-263b-4b21-bd17-f19fc7ca8700`
+  - Get the clothes Objects based on id
 
   ```
    {
@@ -73,7 +73,7 @@
   
 
 
-  - Endpoint: `/api/v1/clothes/food/3ec7d422-263b-4b21-bd17-f19fc7ca8700`
+  - Endpoint: `/api/v1/clothes/3ec7d422-263b-4b21-bd17-f19fc7ca8700`
   - delete an specific abject based on id and return the other objects in db
 
   ```
@@ -85,6 +85,65 @@
             "price": "50 JD"
         }
     }
+
+   ```
+
+    ---------------
+
+    
+    - Endpoint: `/api/v1/food`
+  - get the food object
+
+  ```
+
+  
+    {
+        "id": "3ec7d422-263b-4b21-bd17-f19fc7ca8700",
+        "data": {
+            "name": "pizza",
+            "sourse": "italy"
+        }
+    }
+  ```
+- Endpoint: `/api/v1/food/3ec7d422-263b-4b21-bd17-f19fc7ca8700`
+  - Get the food Objects based on id
+
+  ```
+   {
+    "id": "3ec7d422-263b-4b21-bd17-f19fc7ca8700",
+    "data": {
+        "name": "pizza",
+        "sourse": "italy"
+    }
+  }
+
+   ``` 
+  
+
+- Endpoint: `/api/v1/food/3ec7d422-263b-4b21-bd17-f19fc7ca8700`
+
+  - Gets the updated food Object
+  >  ``` 
+         {  
+        "id": "3ec7d422-263b-4b21-bd17-f19fc7ca8700",
+        "data": {
+        "name": "burger",
+        "source": "UK JD"
+              }
+         }
+          
+       ```      
+  
+  
+
+
+  - Endpoint: `/api/v1/food/3ec7d422-263b-4b21-bd17-f19fc7ca8700`
+  - delete an specific abject based on id and return the other objects in db
+
+  
+
+    
+
 Endpoint: anything else ..
 
 Returns an error 404
@@ -104,7 +163,7 @@ Returns an Object
 - Unit Tests: `npm run test`
 - Lint Tests: `npm run lint`
 
-
+![uml](asset/uml.PNG)
 
  11 PM | Today 
 
